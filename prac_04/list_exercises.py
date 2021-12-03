@@ -1,13 +1,24 @@
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+
 
 def main():
     numbers = []
+    username = input("Enter your username: ")
+    username_checker(username)
     input_elements(numbers)
     print_results(numbers)
 
 
+def username_checker(username):
+    if username in usernames:
+        print("Access granted")
+    else:
+        print("Access denied")
+
+
 def input_elements(numbers):
     for i in range(1, 5+1):
-        number = float(input("Number"))
+        number = float(input("Number: "))
         numbers.append(number)
     return numbers
 
