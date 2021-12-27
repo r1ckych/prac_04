@@ -8,6 +8,7 @@ def main():
     """Demo test code to show how to use car class."""
     my_car = Car(100)
     my_car.drive(30)
+    my_car.add_fuel(20)
     print("fuel =", my_car.fuel)
     print("odo =", my_car.odometer)
     print(my_car)
