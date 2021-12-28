@@ -10,9 +10,10 @@ class Guitar:
 
     def is_vintage(self):
         if self.get_age() > 50:
-            return True
-        if self.get_age() < 50:
-            return False
+            return " (vintage)"
+        else:
+            return " "
+
 
     def __str__(self):
         return "{} ({}) : ${}".format(self.name, self.year, self.cost)
