@@ -32,10 +32,8 @@ for number in numbers:
 for i, number in enumerate(numbers, 1):
     print(f"Number {i} is {number:>5}")
 
-# TODO: Use string formatting (.format() or f-strings) to produce the output:
 # 1922 Gibson L-5 CES for about $16,035!
 print(f"{year} {name} for about {cost}!")
-# TODO: Using a for loop with the range function and string formatting,
 # produce the following right-aligned output (DO NOT use a list):
 for i in range(0, 151, 50):
     print(f"{i:>5}")
