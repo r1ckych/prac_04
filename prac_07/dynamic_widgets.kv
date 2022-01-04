@@ -1,0 +1,43 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        BoxLayout:
+            orientation: 'vertical'
+            # this layout is populated with Button widgets in app code
+            id: entries_box
+
+        BoxLayout:
+            size_hint_x: 0.35
+            orientation: 'vertical'
+            Label:
+                text: 'Name:'
+                size_hint_y: None
+                height: 40
+            TextInput:
+                id: input_name
+                size_hint_y: None
+                height: 40
+            Label:
+                text: "Contact No: "
+                size_hint_y: None
+                height: 40
+
+            TextInput:
+                id: input_contact_number
+                size_hint_y: None
+                height: 40
+
+            Widget: # invisible widget ot take empty space
+
+    Label:
+        size_hint_y: 0.1
+        text: app.status_text
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.2
+        Button:
+            text: "Add New Contact"
+            on_release: app.add_contact()
+        Button:
+            text: "Clear Widgets"
+            on_release: app.clear_all()
