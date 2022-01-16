@@ -32,4 +32,11 @@ def get_extensions(files):
                     extensions.append(new_extensions)
     return extensions
 
+
+def create_directories(extensions):
+    for extension in extensions:
+        if extension not in os.listdir('.'):
+            os.mkdir(extension)
+
+
 main()
