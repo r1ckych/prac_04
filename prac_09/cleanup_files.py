@@ -30,7 +30,15 @@ def rename_files(dir_list):
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    new_name_chars = list(filename)
 
+    for i, char in enumerate(new_name_chars):
+        if i > 0 and char.isupper() and new_name_chars[i - 1].isalpha():
+            new_name_chars.insert(i, "_")
+        filename = "".join(new_name_chars)
+
+    filename = filename.title().replace(".Txt", ".txt")
+    return filename
 
 
 main()
