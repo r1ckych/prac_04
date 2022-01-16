@@ -39,4 +39,14 @@ def create_directories(extensions):
             os.mkdir(extension)
 
 
+def move_files(extensions):
+    for extension in extensions:
+        for file in get_filenames():
+            for i, char in enumerate(file):
+                if char == '.':
+                    file_extension = file[i + 1: len(file)]
+                    if extension == file_extension:
+                        shutil.move(file, extension)
+
+
 main()
