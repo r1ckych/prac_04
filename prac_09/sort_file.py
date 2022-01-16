@@ -22,4 +22,14 @@ def get_filenames():
     return filenames
 
 
+def get_extensions(files):
+    extensions = []
+    for file in files:
+        for i, char in enumerate(file):
+            if char == ".":
+                new_extensions = file[i+1: len(file)]
+                if new_extensions not in extensions:
+                    extensions.append(new_extensions)
+    return extensions
+
 main()
